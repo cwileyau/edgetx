@@ -1,4 +1,4 @@
-semver: 2.10.6
+semver: 2.12.0
 header: 
    name: "DF95370 HL"
    modelId: 
@@ -23,112 +23,119 @@ customThrottleWarningPosition: 100
 beepANACenter: 0
 mixData: 
  -
-   weight: 100
    destCh: 0
-   srcRaw: I0
+   srcRaw: "I0"
    carryTrim: 0
    mixWarn: 0
    mltpx: ADD
+   delayPrec: 0
    speedPrec: 0
+   flightModes: 000000000
+   weight: 100
    offset: 0
    swtch: "NONE"
-   flightModes: 000000000
    delayUp: 0
    delayDown: 0
    speedUp: 0
    speedDown: 0
    name: ""
  -
-   weight: 4
    destCh: 0
-   srcRaw: I6
+   srcRaw: "I6"
    carryTrim: 0
    mixWarn: 0
    mltpx: ADD
+   delayPrec: 0
    speedPrec: 0
+   flightModes: 000000000
+   weight: 4
    offset: 0
    swtch: "NONE"
-   flightModes: 000000000
    delayUp: 0
    delayDown: 0
    speedUp: 0
    speedDown: 0
    name: "RuR"
  -
-   weight: -4
    destCh: 0
-   srcRaw: I5
+   srcRaw: "I5"
    carryTrim: 0
    mixWarn: 0
    mltpx: ADD
+   delayPrec: 0
    speedPrec: 0
+   flightModes: 000000000
+   weight: -4
    offset: 0
    swtch: "NONE"
-   flightModes: 000000000
    delayUp: 0
    delayDown: 0
    speedUp: 0
    speedDown: 0
    name: "RuL"
  -
-   weight: GV1
    destCh: 2
-   srcRaw: I2
+   srcRaw: "I2"
    carryTrim: 0
    mixWarn: 0
    mltpx: ADD
+   delayPrec: 0
    speedPrec: 0
+   flightModes: 000000000
+   weight: "gv(0)"
    offset: 0
    swtch: "NONE"
-   flightModes: 000000000
    delayUp: 0
    delayDown: 0
    speedUp: 0
    speedDown: 0
    name: ""
  -
-   weight: -8
    destCh: 2
-   srcRaw: I2
+   srcRaw: "I2"
    carryTrim: 0
    mixWarn: 0
    mltpx: ADD
+   delayPrec: 0
    speedPrec: 0
-   offset: 0
-   swtch: "SB0"
    flightModes: 000000000
+   weight: -15
+   offset: 0
+   swtch: "SE0"
    delayUp: 0
    delayDown: 0
    speedUp: 0
    speedDown: 0
    name: "hi"
  -
-   weight: 8
    destCh: 2
-   srcRaw: I2
+   srcRaw: "I2"
    carryTrim: 0
    mixWarn: 0
    mltpx: ADD
+   delayPrec: 0
    speedPrec: 0
-   offset: 0
-   swtch: "SB2"
    flightModes: 000000000
+   weight: 8
+   offset: 0
+   swtch: "SE2"
    delayUp: 0
    delayDown: 0
    speedUp: 0
    speedDown: 0
    name: "lo"
  -
-   weight: 100
    destCh: 3
-   srcRaw: I3
+   srcRaw: "I3"
    carryTrim: 0
    mixWarn: 0
    mltpx: ADD
+   delayPrec: 0
    speedPrec: 0
+   flightModes: 000000000
+   weight: 115
    offset: 0
    swtch: "NONE"
-   flightModes: 000000000
    delayUp: 0
    delayDown: 0
    speedUp: 0
@@ -145,8 +152,8 @@ limitData:
       curve: 0
       name: "RUD"
    2:
-      min: 200
-      max: -50
+      min: 0
+      max: -150
       ppmCenter: 0
       offset: 0
       symetrical: 0
@@ -158,85 +165,87 @@ expoData:
    mode: 3
    scale: 0
    trimSource: 0
-   srcRaw: Ail
-   chn: 0
-   swtch: "SF0"
-   flightModes: 000000000
+   srcRaw: "Ail"
    weight: 70
-   name: ""
    offset: 0
+   swtch: "SF0"
    curve: 
       type: 1
       value: 98
- -
-   mode: 3
-   scale: 0
-   trimSource: 0
-   srcRaw: Ail
    chn: 0
-   swtch: "SF2"
    flightModes: 000000000
-   weight: 100
    name: ""
-   offset: 0
-   curve: 
-      type: 1
-      value: 98
  -
    mode: 3
    scale: 0
    trimSource: 0
-   srcRaw: Thr
-   chn: 2
-   swtch: "NONE"
-   flightModes: 000000000
+   srcRaw: "Ail"
    weight: 100
-   name: ""
    offset: 0
+   swtch: "SF2"
+   curve: 
+      type: 1
+      value: 98
+   chn: 0
+   flightModes: 000000000
+   name: ""
+ -
+   mode: 3
+   scale: 0
+   trimSource: 0
+   srcRaw: "Thr"
+   weight: 90
+   offset: 0
+   swtch: "NONE"
    curve: 
       type: 1
       value: -80
+   chn: 2
+   flightModes: 000000000
+   name: ""
  -
    mode: 3
    scale: 0
    trimSource: 0
-   srcRaw: Rud
-   chn: 3
-   swtch: "NONE"
-   flightModes: 000000000
-   weight: -10
-   name: ""
+   srcRaw: "Rud"
+   weight: -20
    offset: 90
+   swtch: "NONE"
    curve: 
       type: 3
       value: 0
+   chn: 3
+   flightModes: 000000000
+   name: ""
  -
    mode: 3
    scale: 0
    trimSource: 0
-   srcRaw: SA
+   srcRaw: "SG"
+   weight: 100
+   offset: 0
+   swtch: "NONE"
    chn: 5
-   swtch: "NONE"
    flightModes: 000000000
-   weight: 100
    name: "RuL"
-   offset: 0
  -
    mode: 3
    scale: 0
    trimSource: 0
-   srcRaw: SD
-   chn: 6
-   swtch: "NONE"
-   flightModes: 000000000
+   srcRaw: "SH"
    weight: 100
-   name: "RuR"
    offset: 0
+   swtch: "NONE"
+   chn: 6
+   flightModes: 000000000
+   name: "RuR"
 logicalSw: 
    0:
       func: FUNC_VNEG
       def: "tele(10),63"
       andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
       delay: 5
       duration: 30
 customFn: 
@@ -249,11 +258,11 @@ customFn:
       func: PLAY_VALUE
       def: "tele(10),1,30"
    2:
-      swtch: "SB2"
+      swtch: "SE2"
       func: PLAY_TRACK
       def: "high,1,1x"
    3:
-      swtch: "SB0"
+      swtch: "SE0"
       func: PLAY_TRACK
       def: "low,1,1x"
    4:
@@ -265,11 +274,15 @@ customFn:
       func: PLAY_TRACK
       def: "normal,1,1x"
    6:
-      swtch: "SB1"
+      swtch: "SE1"
       func: PLAY_TRACK
       def: "normal,1,1x"
 flightModeData: 
    0:
+      trim: 
+         1:
+            value: 4
+            mode: 0
       name: ""
       swtch: "NONE"
       fadeIn: 0
@@ -311,6 +324,9 @@ moduleData:
       mod: 
          crsf: 
             telemetryBaudrate: 0
+            crsfArmingMode: 0
+            crsfArmingTrigger: "NONE"
+            spare3: 0
 trainerData: 
    mode: OFF
    channelsStart: 0
@@ -539,7 +555,7 @@ telemetrySensors:
       cfg: 
          custom: 
             ratio: 0
-            offset: -1
+            offset: 4
    11:
       id1: 
          id: 8
@@ -733,6 +749,144 @@ screens:
                      val: tele(14)
 view: 0
 modelRegistrationID: " 692XAP-"
+customSwitches: 
+   SW1:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_ON
+      state: 1
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW2:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW3:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW4:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW5:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW6:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SD:
+      name: ""
+      type: GLOBAL
+      group: 0
+      start: START_PREVIOUS
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SA:
+      name: ""
+      type: GLOBAL
+      group: 0
+      start: START_PREVIOUS
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+cfsGroupOn: 
+   1:
+      v: 1
+   2:
+      v: 0
+   3:
+      v: 0
+   4:
+      v: 0
 usbJoystickExtMode: 0
 usbJoystickIfMode: JOYSTICK
 usbJoystickCircularCut: 0

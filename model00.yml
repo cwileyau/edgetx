@@ -1,4 +1,4 @@
-semver: 2.11.1
+semver: 2.12.0
 header: 
    name: "DF65370 HL"
 telemetryProtocol: 0
@@ -13,7 +13,7 @@ extendedLimits: 1
 extendedTrims: 1
 throttleReversed: 0
 enableCustomThrottleWarning: 1
-disableTelemetryWarning: 0
+disableTelemetryWarning: 1
 showInstanceIds: 0
 checklistInteractive: 0
 customThrottleWarningPosition: 100
@@ -98,7 +98,7 @@ mixData:
    flightModes: 000000000
    weight: -15
    offset: 0
-   swtch: "SB0"
+   swtch: "SE0"
    delayUp: 0
    delayDown: 0
    speedUp: 0
@@ -115,7 +115,7 @@ mixData:
    flightModes: 000000000
    weight: 65
    offset: 0
-   swtch: "SB2"
+   swtch: "SE2"
    delayUp: 0
    delayDown: 0
    speedUp: 0
@@ -150,7 +150,7 @@ limitData:
       name: "RUD"
    2:
       min: 0
-      max: 0
+      max: -174
       ppmCenter: 0
       offset: 0
       symetrical: 0
@@ -218,7 +218,7 @@ expoData:
    mode: 3
    scale: 0
    trimSource: 0
-   srcRaw: "SA"
+   srcRaw: "SG"
    weight: 100
    offset: 0
    swtch: "NONE"
@@ -229,7 +229,7 @@ expoData:
    mode: 3
    scale: 0
    trimSource: 0
-   srcRaw: "SD"
+   srcRaw: "SH"
    weight: 100
    offset: 0
    swtch: "NONE"
@@ -269,11 +269,11 @@ customFn:
       func: PLAY_VALUE
       def: "tele(10),0,30"
    2:
-      swtch: "SB2"
+      swtch: "SE2"
       func: PLAY_TRACK
       def: "high,1,1x"
    3:
-      swtch: "SB0"
+      swtch: "SE0"
       func: PLAY_TRACK
       def: "low,1,1x"
    4:
@@ -285,15 +285,21 @@ customFn:
       func: PLAY_TRACK
       def: "normal,1,1x"
    6:
-      swtch: "SB1"
+      swtch: "SE1"
       func: PLAY_TRACK
-      def: "normal,1,1x"
+      def: "normal,0,1x"
 flightModeData: 
    0:
       trim: 
          0:
-            value: -508
-            mode: 0
+            value: 0
+            mode: 31
+         1:
+            value: 0
+            mode: 31
+         2:
+            value: 0
+            mode: 31
       name: ""
       swtch: "NONE"
       fadeIn: 0
@@ -764,6 +770,144 @@ screens:
                      val: tele(-15)
 view: 0
 modelRegistrationID: " 692XAP-"
+customSwitches: 
+   SW1:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_ON
+      state: 1
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW2:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW3:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW4:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW5:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW6:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SD:
+      name: ""
+      type: GLOBAL
+      group: 0
+      start: START_PREVIOUS
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SA:
+      name: ""
+      type: GLOBAL
+      group: 0
+      start: START_PREVIOUS
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+cfsGroupOn: 
+   1:
+      v: 1
+   2:
+      v: 0
+   3:
+      v: 0
+   4:
+      v: 0
 usbJoystickExtMode: 0
 usbJoystickIfMode: JOYSTICK
 usbJoystickCircularCut: 0
