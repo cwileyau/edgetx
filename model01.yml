@@ -1,4 +1,4 @@
-semver: 2.12.0
+semver: 2.12.2
 header: 
    name: "new95370"
    modelId: 
@@ -48,13 +48,13 @@ mixData:
    delayPrec: 0
    speedPrec: 0
    flightModes: 000000000
-   weight: 8
+   weight: 3
    offset: 0
    swtch: "NONE"
    delayUp: 0
    delayDown: 0
-   speedUp: 0
-   speedDown: 0
+   speedUp: 3
+   speedDown: 3
    name: "RuR"
  -
    destCh: 0
@@ -65,13 +65,13 @@ mixData:
    delayPrec: 0
    speedPrec: 0
    flightModes: 000000000
-   weight: -8
+   weight: -3
    offset: 0
    swtch: "NONE"
    delayUp: 0
    delayDown: 0
-   speedUp: 0
-   speedDown: 0
+   speedUp: 3
+   speedDown: 3
    name: "RuL"
  -
    destCh: 2
@@ -99,7 +99,7 @@ mixData:
    delayPrec: 0
    speedPrec: 0
    flightModes: 000000000
-   weight: -15
+   weight: -8
    offset: 0
    swtch: "SE0"
    delayUp: 0
@@ -183,12 +183,12 @@ expoData:
    scale: 0
    trimSource: 0
    srcRaw: "Ail"
-   weight: 85
+   weight: 80
    offset: 0
    swtch: "SF0"
    curve: 
       type: 1
-      value: 97
+      value: 100
    chn: 0
    flightModes: 000000000
    name: ""
@@ -225,8 +225,8 @@ expoData:
    scale: 0
    trimSource: 0
    srcRaw: "Rud"
-   weight: -20
-   offset: 95
+   weight: -8
+   offset: 94
    swtch: "NONE"
    curve: 
       type: 1
@@ -312,7 +312,7 @@ flightModeData:
       fadeOut: 0
       gvars: 
          0:
-            val: 95
+            val: 94
          1:
             val: 0
          2:
