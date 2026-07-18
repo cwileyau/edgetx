@@ -1,4 +1,4 @@
-EDGETX Model files for AUS370 DF65 AUS370 DF95 and AUS1602 V8 IOM
+EDGETX Model files for DF65 AUS370, DF95 AUS370 and V8 IOM AUS1602
 
 Model 0 is DF65, Model 1 is DF95, Model 2 is IOM (matches model # on receivers)
 
