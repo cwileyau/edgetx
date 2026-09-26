@@ -55,7 +55,7 @@ mixData:
    delayDown: 0
    speedUp: 3
    speedDown: 3
-   name: ""
+   name: "rus"
  -
    destCh: 0
    srcRaw: "SG"
@@ -72,7 +72,7 @@ mixData:
    delayDown: 0
    speedUp: 3
    speedDown: 3
-   name: ""
+   name: "rup"
  -
    destCh: 1
    srcRaw: "I1"
@@ -123,7 +123,7 @@ mixData:
    delayDown: 0
    speedUp: 0
    speedDown: 0
-   name: ""
+   name: "pin"
  -
    destCh: 2
    srcRaw: "SL1"
@@ -140,7 +140,7 @@ mixData:
    delayDown: 0
    speedUp: 0
    speedDown: 0
-   name: ""
+   name: "vmg"
  -
    destCh: 2
    srcRaw: "SE"
@@ -157,7 +157,7 @@ mixData:
    delayDown: 0
    speedUp: 0
    speedDown: 0
-   name: ""
+   name: "hnl"
  -
    destCh: 2
    srcRaw: "SA"
@@ -174,7 +174,7 @@ mixData:
    delayDown: 0
    speedUp: 0
    speedDown: 0
-   name: ""
+   name: "gyb"
  -
    destCh: 3
    srcRaw: "I3"
@@ -203,8 +203,8 @@ limitData:
       curve: 0
       name: ""
    2:
-      min: 550
-      max: -550
+      min: 620
+      max: -510
       ppmCenter: 0
       offset: 0
       symetrical: 0
@@ -239,7 +239,7 @@ expoData:
       value: 70
    chn: 0
    flightModes: 000000000
-   name: ""
+   name: "strt"
  -
    mode: 3
    scale: 0
